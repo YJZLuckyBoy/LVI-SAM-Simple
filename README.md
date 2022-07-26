@@ -6,7 +6,7 @@ The "imu2LidarExtrinsicRotation" and "lcExtrinsicTranslation" in "config/params_
 For more details, please refer to my blog: https://blog.csdn.net/qq_42938987/article/details/126005082
 
 <p align='center'>
-    <img src="https://img-blog.csdnimg.cn/8903d14cb18b45e38b1e66c96a06c72c.png#pic_center" alt="drawing" width="286.5"/>
+    <img src="https://img-blog.csdnimg.cn/8903d14cb18b45e38b1e66c96a06c72c.png#pic_center" alt="drawing" width="328"/>
     <img src="https://img-blog.csdnimg.cn/f0e697c1dc0444beb8970c0a2115d840.png#pic_center" alt="drawing" width="328"/>
 </p>
 
