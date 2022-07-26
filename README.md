@@ -3,6 +3,8 @@ This repo is modified based on LVI_SAM, which makes it easier to adapt your sens
 
 The "imu2LidarExtrinsicRotation" in "config/params_camera.yaml" needs to be set as your device extrinsic.
 
+For more details, please refer to my blog: https://blog.csdn.net/qq_42938987/article/details/126005082
+
 # LVI-SAM
 
 This repository contains code for a lidar-visual-inertial odometry and mapping system, which combines the advantages of [LIO-SAM](https://github.com/TixiaoShan/LIO-SAM/tree/a246c960e3fca52b989abf888c8cf1fae25b7c25) and [Vins-Mono](https://github.com/HKUST-Aerial-Robotics/VINS-Mono) at a system level.
