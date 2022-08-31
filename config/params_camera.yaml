@@ -26,9 +26,9 @@ lcExtrinsicRotation: !!opencv-matrix
    rows: 3
    cols: 3
    dt: d
-   data: [ 1, 0, 0, 
-           0, 1, 0, 
-           0, 0, 1]
+   data: [ 0, -1, 0, 
+           0, 0, -1, 
+           1, 0, 0]
 
 lcExtrinsicTranslation: !!opencv-matrix
    rows: 3

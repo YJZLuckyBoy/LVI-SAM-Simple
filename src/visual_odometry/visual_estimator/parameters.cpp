@@ -79,7 +79,7 @@ void readParameters(ros::NodeHandle &n)
         }
         if (ESTIMATE_EXTRINSIC == 0)
             ROS_INFO(" Fix extrinsic param.");
-
+        
         cv::Mat cv_R, cv_T;
         fsSettings["extrinsicRotation"] >> cv_R;
         fsSettings["extrinsicTranslation"] >> cv_T;
@@ -96,6 +96,7 @@ void readParameters(ros::NodeHandle &n)
         
     } 
 
+    // add by YJZ
     // imu to lidar extrinsic
     cv::Mat cv_imu_2_lidar_R;
     Eigen::Matrix3d eigen_imu_2_lidar_R;

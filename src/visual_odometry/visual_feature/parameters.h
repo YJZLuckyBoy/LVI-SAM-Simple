@@ -94,6 +94,8 @@ extern double L_C_RX;
 extern double L_C_RY;
 extern double L_C_RZ;
 
+// add by YJZ
+extern Eigen::Matrix4d Camera_To_Lidar_Extrinsic;
 
 void readParameters(ros::NodeHandle &n);
 

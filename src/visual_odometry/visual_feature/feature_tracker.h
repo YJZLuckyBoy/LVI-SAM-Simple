@@ -276,10 +276,21 @@ public:
 
             for (int i = 0; i < (int)depth_cloud_local->size(); ++i)
             {
-                // convert points from 3D to 2D
-                Eigen::Vector3d p_3d(-depth_cloud_local->points[i].y,
-                                     -depth_cloud_local->points[i].z,
-                                      depth_cloud_local->points[i].x);
+                // add by YJZ
+                Eigen::Matrix3d rotation_ = Camera_To_Lidar_Extrinsic.block<3, 3>(0, 0);
+                Eigen::Vector3d translate_ = Camera_To_Lidar_Extrinsic.block<3, 1>(0, 3);
+
+                // // convert points from 3D to 2D
+                // Eigen::Vector3d p_3d(-depth_cloud_local->points[i].y,
+                //                      -depth_cloud_local->points[i].z,
+                //                       depth_cloud_local->points[i].x);
+
+                Eigen::Vector3d p_3d_(depth_cloud_local->points[i].x,
+                                      depth_cloud_local->points[i].y,
+                                      depth_cloud_local->points[i].z);
+
+                Eigen::Vector3d p_3d = rotation_ * p_3d_ + translate_;
+                
                 Eigen::Vector2d p_2d;
                 camera_model->spaceToPlane(p_3d, p_2d);
                 

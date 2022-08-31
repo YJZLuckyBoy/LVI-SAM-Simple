@@ -1,7 +1,11 @@
 # NEW Feature
 This repo is modified based on LVI_SAM, which makes it easier to adapt your sensor.
 
-The "imu2LidarExtrinsicRotation" and "lcExtrinsicTranslation" in "config/params_camera.yaml" needs to be set as your device extrinsic.
+1. The original version of lio_sam sets many sensor external parameters to fixed values in the code, this version extracts the external parameters into the yaml file, making it easier to configure;
+
+2. The original version of lio_sam dose not consider the translation amount between lidar and camera, this version adds the translation amount;
+
+3. The "imu2LidarExtrinsicRotation" 、“extrinsicRotation”、“extrinsicTranslation”、"lcExtrinsicRotation" and "lcExtrinsicTranslation" in "config/params_camera.yaml" needs to be set as your device extrinsic.
 
 For more details, please refer to my blog: https://blog.csdn.net/qq_42938987/article/details/126005082
 

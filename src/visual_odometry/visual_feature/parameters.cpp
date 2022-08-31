@@ -28,6 +28,9 @@ double L_C_RX;
 double L_C_RY;
 double L_C_RZ;
 
+// add by YJZ
+Eigen::Matrix4d Camera_To_Lidar_Extrinsic;
+
 int USE_LIDAR;
 int LIDAR_SKIP;
 
@@ -71,7 +74,8 @@ void readParameters(ros::NodeHandle &n)
     // L_C_RX = fsSettings["lidar_to_cam_rx"];
     // L_C_RY = fsSettings["lidar_to_cam_ry"];
     // L_C_RZ = fsSettings["lidar_to_cam_rz"];
-
+    
+    // add by YJZ
     // camera to lidar extrinsic
     cv::Mat cv_R, cv_T;
     fsSettings["lcExtrinsicRotation"] >> cv_R;
@@ -80,6 +84,9 @@ void readParameters(ros::NodeHandle &n)
     Eigen::Vector3d eigen_T;
     cv::cv2eigen(cv_R, eigen_R);
     cv::cv2eigen(cv_T, eigen_T);
+
+    Camera_To_Lidar_Extrinsic.block<3, 3>(0, 0) = eigen_R;
+    Camera_To_Lidar_Extrinsic.block<3, 1>(0, 3) = eigen_T;
 
     tf::Quaternion orientation;
     Eigen::Quaterniond tmpExtrinsic_(eigen_R.block<3, 3>(0, 0));

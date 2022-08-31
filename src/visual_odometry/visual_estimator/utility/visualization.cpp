@@ -85,6 +85,7 @@ void pubLatestOdometry(const Eigen::Vector3d &P, const Eigen::Quaterniond &Q, co
     // tf::Quaternion q_cam_to_lidar(0, 1, 0, 0); // mark: camera - lidar
     // tf::Quaternion q_odom_ros = q_odom_cam * q_cam_to_lidar;
 
+    // add by YJZ
     tf::Quaternion q_odom_ros = q_odom_cam * imu2LidarExtrinsicRot;
 
     tf::quaternionTFToMsg(q_odom_ros, odometry.pose.pose.orientation);
