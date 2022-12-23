@@ -59,16 +59,16 @@ extrinsicRotation: !!opencv-matrix
    rows: 3
    cols: 3
    dt: d
-   data: [ 0.00781298,  -0.0042792,    0.999961,
-          -0.99986,  -0.0148681,  0.00774856,
-          0.0148343 ,  -0.999881, -0.00439476]
+   data: [  0.00781298,  -0.0042792,     0.99996,
+            -0.999859,   -0.014868,  0.00774856,
+            0.0148343,    -0.99988, -0.00439476]
 
 #Translation from camera frame to imu frame, imu^T_cam
 extrinsicTranslation: !!opencv-matrix
    rows: 3
    cols: 1
    dt: d
-   data: [0.810544, -0.307055, 0.802724]
+   data: [1.08, -0.312718, 0.726546]
 
 #feature traker paprameters
 max_cnt: 150            # max feature number in feature tracking
