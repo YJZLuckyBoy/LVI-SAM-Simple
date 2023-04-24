@@ -1,4 +1,6 @@
 # NEW Feature
+- [lviorf](https://github.com/YJZLuckyBoy/lviorf) is now available, which supports more lidar and is more robust;
+
 - This repo is modified based on LVI_SAM, which makes it easier to adapt your sensor;
 
 - The original version of lio_sam sets many sensor external parameters to fixed values in the code, this version extracts the external parameters into the yaml file, making it easier to configure;
